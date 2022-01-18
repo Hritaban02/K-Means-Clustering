@@ -1,0 +1,140 @@
+###################################################
+
+ MACHINE LEARNING GROUP-40 ASSIGNMENT-2 
+ Neha Dalmia 19CS30055 
+ Hritaban Ghosh 19CS30053
+
+ Dataset Used: https://archive.ics.uci.edu/ml/datasets/liver+disorders
+
+###################################################
+
+DATA PREPROCESSING STAGE
+
+Checking for null values in the dataframe: 
+mcv            0
+alkphos        0
+sgpt           0
+sgot           0
+gammagt        0
+drinks >= 3    0
+dtype: int64
+
+###################################################
+
+ INFORMATION FOR THE USER
+
+ lloyd cluster centre initialization : The initial cluster centres are k randomly selected data points from the dataset.
+ kmeans++ cluster centre initialization : The initial cluster centres are selected according to the kmeans++ heuristic.
+ Note: The algorithm chosen here will be used for all the analysis in subsequent steps.
+
+###################################################
+
+ Enter the value of k which is the number of clusters (k>1): 2
+
+============================================================================
+
+ Enter the method to be used for cluster centre initialization (lloyd or kmeans++): lloyd
+
+###################################################
+
+ Training the Kmeans Model with number of clusters 2 and initialization method lloyd as parameters...
+
+Measuring Clustering Performance using available ground truth
+
+homogeneity_score: 0.024241035266675395
+adjusted_rand_score: 0.019604454673851725
+normalized_mutual_info_score: 0.02671265617369269
+fowlkes_mallows_score: 0.5656677135032965
+
+--------------------------------------------------
+
+Measuring Clustering Performance without using ground truth
+
+silhouette_score: 0.3822167408056496
+calinski_harabasz_score: 127.92594521018077
+
+###################################################
+ ANALYSIS TO DETERMINE OPTIMAL NUMBER OF CLUSTERS
+
+ Plotting and Saving Silhouette Index versus Number Of Clusters graph in Analysis Folder...
+ Done
+
+ Plotting and Saving Calinski Harabasz Index versus Number Of Clusters graph in Analysis Folder...
+ Done
+
+--------------------------------------------------
+
+ Perform Wang's Method Of Cross Validation
+
+ Enter the value of c which is the number of permutations in Wang's Method Of Cross Validation(c>0): 20
+
+ Plotting and Saving Wang's Method Of Cross Validation graph in Analysis Folder...
+ Done
+
+###################################################
+
+ OPTIMAL NUMBER OF CLUSTERS FOR THE LIVER DISORDERS DATASET
+
+ Based upon the analysis performed in the previous steps, it is clear that for the Liver Disorders Dataset, optimal number of clusters = 2
+
+###################################################
+
+ Performing Test A
+ Test A performs random initialization for the initial cluster centres.
+
+ Plotting and Saving Test A - Homogeneity Score Analysis graph in Analysis Folder...
+ Done
+ Homogeneity Score in Test A: 
+ Mean =  0.037063091777341656
+ Standard Deviation =  0.008235539500325621
+
+ Plotting and Saving Test A - Adjusted Rand Score Analysis graph in Analysis Folder...
+ Done
+ ARI in Test A: 
+ Mean =  0.014955333769709533
+ Standard Deviation =  0.005490013175001342
+
+ Plotting and Saving Test A - Normalized Mutual Info Score Analysis graph in Analysis Folder...
+ Done
+ NMI Index in Test A: 
+ Mean =  0.04523039655297846
+ Standard Deviation =  0.011644386018848943
+
+ Plotting and Saving Test A - Fowlkes Mallows Score Analysis graph in Analysis Folder...
+ Done
+ Fowlkes Mallows Score  in Test A: 
+ Mean =  0.5982890614452904
+ Standard Deviation =  0.019694880499864533
+---------------------------------------------------
+
+ Performing Improved Test A
+ Improved Test A performs kmeans++ initialization for the initial cluster centres.
+
+ Plotting and Saving Improved Test A - Homogeneity Score Analysis graph in Analysis Folder...
+ Done
+ Homogeneity Score in Improved Test A: 
+ Mean =  0.048780686614704895
+ Standard Deviation =  0.005033867356807861
+
+ Plotting and Saving Improved Test A - Adjusted Rand Score Analysis graph in Analysis Folder...
+ Done
+ ARI in Improved Test A: 
+ Mean =  0.014712063751795464
+ Standard Deviation =  0.004615239816352399
+
+ Plotting and Saving Improved Test A - Normalized Mutual Info Score Analysis graph in Analysis Folder...
+ Done
+ NMI Index in Improved Test A: 
+ Mean =  0.06313478861651275
+ Standard Deviation =  0.0064140263086072055
+
+ Plotting and Saving Improved Test A - Fowlkes Mallows Score Analysis graph in Analysis Folder...
+ Done
+ Fowlkes Mallows Score in Improved Test A: 
+ Mean =  0.6295877024829853
+ Standard Deviation =  0.0059853188874662575
+
+###################################################
+
+
+Process finished with exit code 1
