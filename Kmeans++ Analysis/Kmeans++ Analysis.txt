@@ -1,0 +1,325 @@
+C:\Users\hritaban\anaconda3\envs\PyCharmLearningProject\python.exe "C:/Users/hritaban/Documents/3rd Year 5th Semester/Machine Learning Assignments/Assignment 2/KMeans Clustering/analysis.py"
+
+###################################################
+
+ MACHINE LEARNING GROUP-40 ASSIGNMENT-2 
+ Neha Dalmia 19CS30055 
+ Hritaban Ghosh 19CS30053
+
+ Dataset Used: https://archive.ics.uci.edu/ml/datasets/liver+disorders
+
+###################################################
+
+DATA PREPROCESSING STAGE
+
+Checking for null values in the dataframe: 
+mcv            0
+alkphos        0
+sgpt           0
+sgot           0
+gammagt        0
+drinks >= 3    0
+dtype: int64
+
+###################################################
+
+ INFORMATION FOR THE USER
+
+ lloyd cluster centre initialization : The initial cluster centres are k randomly selected data points from the dataset.
+ kmeans++ cluster centre initialization : The initial cluster centres are selected according to the kmeans++ heuristic.
+ Note: The algorithm chosen here will be used for all the analysis in subsequent steps.
+
+###################################################
+
+ Enter the value of k which is the number of clusters (k>1): 2
+
+============================================================================
+
+ Enter the method to be used for cluster centre initialization (lloyd or kmeans++): kmeans++
+
+###################################################
+
+ Training the Kmeans Model with number of clusters 2 and initialization method kmeans++ as parameters...
+
+Measuring Clustering Performance using available ground truth
+
+homogeneity_score: 0.03842862110580102
+adjusted_rand_score: 0.015557889562203782
+normalized_mutual_info_score: 0.05008624123591687
+fowlkes_mallows_score: 0.6321547380163345
+
+--------------------------------------------------
+
+Measuring Clustering Performance without using ground truth
+
+silhouette_score: 0.4719650542379755
+calinski_harabasz_score: 137.00107992657732
+
+###################################################
+ ANALYSIS TO DETERMINE OPTIMAL NUMBER OF CLUSTERS
+
+ Plotting and Saving Silhouette Index versus Number Of Clusters graph in Analysis Folder...
+ Done
+
+ Plotting and Saving Calinski Harabasz Index versus Number Of Clusters graph in Analysis Folder...
+ Done
+
+--------------------------------------------------
+
+ Perform Wang's Method Of Cross Validation
+
+ Enter the value of c which is the number of permutations in Wang's Method Of Cross Validation(c>0): 20
+
+ Plotting and Saving Wang's Method Of Cross Validation graph in Analysis Folder...
+ Done
+
+###################################################
+
+ OPTIMAL NUMBER OF CLUSTERS FOR THE LIVER DISORDERS DATASET
+
+ Based upon the analysis performed in the previous steps, it is clear that for the Liver Disorders Dataset, optimal number of clusters = 2
+
+###################################################
+
+ Performing Test A
+ Test A performs random initialization for the initial cluster centres.
+
+ Plotting and Saving Test A - Homogeneity Score Analysis graph in Analysis Folder...
+ Done
+ Homogeneity Score in Test A: 
+ Mean =  0.039489612047602936
+ Standard Deviation =  0.00673999654540156
+
+ Plotting and Saving Test A - Adjusted Rand Score Analysis graph in Analysis Folder...
+ Done
+ ARI in Test A: 
+ Mean =  0.016377484999706184
+ Standard Deviation =  0.004668374755665438
+
+ Plotting and Saving Test A - Normalized Mutual Info Score Analysis graph in Analysis Folder...
+ Done
+ NMI Index in Test A: 
+ Mean =  0.048466774051732386
+ Standard Deviation =  0.009566500316302753
+
+ Plotting and Saving Test A - Fowlkes Mallows Score Analysis graph in Analysis Folder...
+ Done
+ Fowlkes Mallows Score  in Test A: 
+ Mean =  0.6021914734498663
+ Standard Deviation =  0.017959521514354468
+---------------------------------------------------
+
+ Performing Improved Test A
+ Improved Test A performs kmeans++ initialization for the initial cluster centres.
+
+ Plotting and Saving Improved Test A - Homogeneity Score Analysis graph in Analysis Folder...
+ Done
+ Homogeneity Score in Improved Test A: 
+ Mean =  0.048014327895461985
+ Standard Deviation =  0.005947283295475934
+
+ Plotting and Saving Improved Test A - Adjusted Rand Score Analysis graph in Analysis Folder...
+ Done
+ ARI in Improved Test A: 
+ Mean =  0.01506432728594969
+ Standard Deviation =  0.004386659363857357
+
+ Plotting and Saving Improved Test A - Normalized Mutual Info Score Analysis graph in Analysis Folder...
+ Done
+ NMI Index in Improved Test A: 
+ Mean =  0.06217959865388441
+ Standard Deviation =  0.007686835602032006
+
+ Plotting and Saving Improved Test A - Fowlkes Mallows Score Analysis graph in Analysis Folder...
+ Done
+ Fowlkes Mallows Score in Improved Test A: 
+ Mean =  0.6301397288839469
+ Standard Deviation =  0.005594036868705659
+
+###################################################
+
+ EXTRA: ANALYSIS OF CLUSTERING MODELS
+
+ Plotting and Saving K-Means Clustering using mcv and alkphos graph in Extra_Analysis Folder...
+ Done
+
+Measuring Clustering Performance using available ground truth
+
+homogeneity_score: 9.201879117210246e-06
+adjusted_rand_score: -0.00266457448340159
+normalized_mutual_info_score: 9.53694903097618e-06
+fowlkes_mallows_score: 0.520939340051738
+
+--------------------------------------------------
+
+Measuring Clustering Performance without using ground truth
+
+silhouette_score: 0.3931610721478888
+calinski_harabasz_score: 244.60671101682792
+---------------------------------------------------
+
+ Plotting and Saving K-Means Clustering using mcv and sgpt graph in Extra_Analysis Folder...
+ Done
+
+Measuring Clustering Performance using available ground truth
+
+homogeneity_score: 0.03364999359786906
+adjusted_rand_score: 0.011427582697596294
+normalized_mutual_info_score: 0.04511630337692067
+fowlkes_mallows_score: 0.6393061913755104
+
+--------------------------------------------------
+
+Measuring Clustering Performance without using ground truth
+
+silhouette_score: 0.5396759183881654
+calinski_harabasz_score: 177.8437025025952
+---------------------------------------------------
+
+ Plotting and Saving K-Means Clustering using mcv and sgot graph in Extra_Analysis Folder...
+ Done
+
+Measuring Clustering Performance using available ground truth
+
+homogeneity_score: 0.043012316046910214
+adjusted_rand_score: 0.01564547580419552
+normalized_mutual_info_score: 0.057330583789543865
+fowlkes_mallows_score: 0.6391971864237722
+
+--------------------------------------------------
+
+Measuring Clustering Performance without using ground truth
+
+silhouette_score: 0.5203685626770715
+calinski_harabasz_score: 180.18416323702078
+---------------------------------------------------
+
+ Plotting and Saving K-Means Clustering using mcv and gammagt graph in Extra_Analysis Folder...
+ Done
+
+Measuring Clustering Performance using available ground truth
+
+homogeneity_score: 0.03653981770430139
+adjusted_rand_score: 0.015515082313816866
+normalized_mutual_info_score: 0.04712364920174914
+fowlkes_mallows_score: 0.6286845514935936
+
+--------------------------------------------------
+
+Measuring Clustering Performance without using ground truth
+
+silhouette_score: 0.5609228148442695
+calinski_harabasz_score: 223.50914881616217
+---------------------------------------------------
+
+ Plotting and Saving K-Means Clustering using alkphos and sgpt graph in Extra_Analysis Folder...
+ Done
+
+Measuring Clustering Performance using available ground truth
+
+homogeneity_score: 5.053865842526891e-06
+adjusted_rand_score: -0.002606113699469878
+normalized_mutual_info_score: 5.230693431392448e-06
+fowlkes_mallows_score: 0.5201115734324485
+
+--------------------------------------------------
+
+Measuring Clustering Performance without using ground truth
+
+silhouette_score: 0.4363547597108741
+calinski_harabasz_score: 226.38596380108862
+---------------------------------------------------
+
+ Plotting and Saving K-Means Clustering using alkphos and sgot graph in Extra_Analysis Folder...
+ Done
+
+Measuring Clustering Performance using available ground truth
+
+homogeneity_score: 0.007186090912982478
+adjusted_rand_score: 0.004542140367629
+normalized_mutual_info_score: 0.00760338906213025
+fowlkes_mallows_score: 0.5367466677803847
+
+--------------------------------------------------
+
+Measuring Clustering Performance without using ground truth
+
+silhouette_score: 0.44790923906728936
+calinski_harabasz_score: 238.22545191617758
+---------------------------------------------------
+
+ Plotting and Saving K-Means Clustering using alkphos and gammagt graph in Extra_Analysis Folder...
+ Done
+
+Measuring Clustering Performance using available ground truth
+
+homogeneity_score: 0.024693835855226737
+adjusted_rand_score: 0.005869051483684866
+normalized_mutual_info_score: 0.03462508429074669
+fowlkes_mallows_score: 0.6498233026166568
+
+--------------------------------------------------
+
+Measuring Clustering Performance without using ground truth
+
+silhouette_score: 0.5263499245415357
+calinski_harabasz_score: 136.7083712964718
+---------------------------------------------------
+
+ Plotting and Saving K-Means Clustering using sgpt and sgot graph in Extra_Analysis Folder...
+ Done
+
+Measuring Clustering Performance using available ground truth
+
+homogeneity_score: 0.04294886214566925
+adjusted_rand_score: 0.017127688103446885
+normalized_mutual_info_score: 0.056283003440750545
+fowlkes_mallows_score: 0.6345201950698005
+
+--------------------------------------------------
+
+Measuring Clustering Performance without using ground truth
+
+silhouette_score: 0.6774717299341008
+calinski_harabasz_score: 401.2462518402505
+---------------------------------------------------
+
+ Plotting and Saving K-Means Clustering using sgpt and gammagt graph in Extra_Analysis Folder...
+ Done
+
+Measuring Clustering Performance using available ground truth
+
+homogeneity_score: 0.03197724106293893
+adjusted_rand_score: 0.015390606115194718
+normalized_mutual_info_score: 0.04004220408593171
+fowlkes_mallows_score: 0.6184849978264249
+
+--------------------------------------------------
+
+Measuring Clustering Performance without using ground truth
+
+silhouette_score: 0.6670448240238993
+calinski_harabasz_score: 347.93835280679514
+---------------------------------------------------
+
+ Plotting and Saving K-Means Clustering using sgot and gammagt graph in Extra_Analysis Folder...
+ Done
+
+Measuring Clustering Performance using available ground truth
+
+homogeneity_score: 0.05031289962443237
+adjusted_rand_score: 0.02211197270241488
+normalized_mutual_info_score: 0.06488613192904535
+fowlkes_mallows_score: 0.6313378001067615
+
+--------------------------------------------------
+
+Measuring Clustering Performance without using ground truth
+
+silhouette_score: 0.6730375399352583
+calinski_harabasz_score: 373.9907669023358
+---------------------------------------------------
+
+###################################################
+
+Process finished with exit code 0
